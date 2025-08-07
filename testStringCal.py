@@ -21,8 +21,10 @@ class TestStringCal(unittest.TestCase):
         self.assertIn("negative numbers not allowed -2,-4", str(context.exception))#neg number will throw exception
     def test_whitespaceOnlyReturnsZero(self):
         self.assertEqual(add("   "), 0) #handle whitespace
-        
-
+    def test_multiLengthDelimiter(self):
+        self.assertEqual(add("//[***]\n1***2***3"), 6) # support delimiters of any length 
+    def test_extractDelimiters_multiLength(self):
+        self.assertEqual(add("//[***][%]\n1***2%3"), 6)
 
      
 if __name__ == '__main__':
