@@ -27,6 +27,8 @@ class TestStringCal(unittest.TestCase):
         self.assertEqual(add("//[***][%]\n1***2%3"), 6)
     def test_numbersGreaterThan1000AreIgnored(self):
         self.assertEqual(add("2,1001,3"), 5) #already source file handle this verify numbers greater than 1000 are ignored
+    def test_singleCharCustomDelimiter(self):
+        self.assertEqual(add("//;\n4;5"), 9)#single character custom delimiter
 
      
 if __name__ == '__main__':
