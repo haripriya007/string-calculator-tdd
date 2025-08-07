@@ -1,0 +1,10 @@
+import unittest
+from stringCal import add
+
+class TestStringCal(unittest.TestCase):
+
+    def test_emptyStringReturnsZero(self):
+        self.assertEqual(add(""), 0)
+
+if __name__ == '__main__':
+    unittest.main()
