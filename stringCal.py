@@ -1,5 +1,5 @@
 def add(numbers):
-    if numbers.strip() == "": #handle whitespace
+    if numbers == "":
         return 0
     delimiter = ","
     if numbers.startswith("//"):
@@ -12,6 +12,6 @@ def add(numbers):
     nums = list(map(int, parts))
     negatives = [str(n) for n in nums if n < 0]
     if negatives:
-        raise Exception("negative numbers not allowed " +, "."join(negatives))
+        raise Exception("negative numbers not allowed " + ",".join(negatives))
     return sum(nums)
     
