@@ -1,7 +1,8 @@
 import re
+DEFAULT_DELIMITERS = [",", "\n"]
 def extractDelimiters(input_string):
 
-    delimiters = [",", "\n"]
+    delimiters = DEFAULT_DELIMITERS.copy()
 
     if input_string.startswith("//"):
         delimiter_part = input_string.split("\n", 1)[0]
