@@ -1,5 +1,5 @@
 def add(numbers):
-    if numbers == "":
+    if numbers.strip() == "": #handle whitespace
         return 0
     delimiter = ","
     if numbers.startswith("//"):

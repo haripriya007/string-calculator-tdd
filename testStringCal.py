@@ -19,7 +19,9 @@ class TestStringCal(unittest.TestCase):
         with self.assertRaises(Exception) as context:
             add("1,-2,3,-4")
         self.assertIn("negative numbers not allowed -2,-4", str(context.exception))#neg number will throw exception
-
+    def test_whitespaceOnlyReturnsZero(self):
+        self.assertEqual(add("   "), 0) #handle whitespace
+        
 
 
      
