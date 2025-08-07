@@ -1,7 +1,12 @@
 def add(numbers):
     if numbers == "":
         return 0
-    numbers = numbers.replace("\n", ",") #newline delimit
-    parts = numbers.split(",")
+    delimiter = ","
+    if numbers.startswith("//"):
+        parts = numbers.split("\n", 1)
+        delimiter = parts[0][2:]
+        numbers = parts[1]
+    numbers = numbers.replace("\n", delimiter)
+    parts = numbers.split(delimiter)
     return sum(map(int, parts))
     

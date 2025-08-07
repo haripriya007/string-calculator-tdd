@@ -13,6 +13,9 @@ class TestStringCal(unittest.TestCase):
         self.assertEqual(add("1,2,3,4"), 10)#multiple numbers
     def test_newlineAsDelimiter(self):
         self.assertEqual(add("1\n2,3"), 6) #newline as delimiter
+    def test_customDelimiter(self):
+        self.assertEqual(add("//;\n1;2"), 3) #custom delimiter
+
 
      
 if __name__ == '__main__':
