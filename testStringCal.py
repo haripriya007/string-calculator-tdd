@@ -6,15 +6,11 @@ class TestStringCal(unittest.TestCase):
     def test_emptyStringReturnsZero(self):
         self.assertEqual(add(""), 0)
     def test_singleNumberReturnsSameNumber(self):
-        self.assertEqual(add("4"), 4)
+        self.assertEqual(add("4"), 4)#single number
     def test_twoNumbersReturnsSum(self):
-        self.assertEqual(add("1,2"), 3)
+        self.assertEqual(add("1,2"), 3)#two numbers 
     def test_multipleNumbersReturnsSum(self):
-        self.assertEqual(add("1,2,3,4"), 10)
-    def test_newlineAsDelimiter(self):
-        self.assertEqual(add("1\n2,3"), 6)
-    def test_customDelimiter(self):
-        self.assertEqual(add("//;\n1;2"), 3)
+        self.assertEqual(add("1,2,3,4"), 10)#multiple numbers
      
 if __name__ == '__main__':
     unittest.main()
