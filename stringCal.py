@@ -1,4 +1,6 @@
 def add(numbers):
     if numbers == "":
         return 0
-    return int(numbers)
+    parts = numbers.split(",")
+    return sum(map(int, parts))
+    
